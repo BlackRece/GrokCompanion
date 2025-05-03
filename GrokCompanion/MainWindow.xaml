@@ -1,0 +1,26 @@
+﻿<Window x:Class="GrokCompanion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Grok Companion App" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Query Input -->
+        <TextBox x:Name="QueryTextBox" Grid.Row="0" Height="50" AcceptsReturn="True" 
+                 TextWrapping="Wrap" Margin="0,0,0,10"/>
+        
+        <!-- Response Display -->
+        <TextBlock x:Name="ResponseTextBlock" Grid.Row="1" TextWrapping="Wrap" 
+                   VerticalAlignment="Top" Margin="0,0,0,10"/>
+        
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button x:Name="SendButton" Content="Send Query" Width="100" Margin="0,0,10,0" Click="SendButton_Click"/>
+            <Button x:Name="DeepSearchButton" Content="DeepSearch" Width="100" Click="DeepSearchButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
